@@ -1,13 +1,10 @@
 #!/bin/sh
 
-# Quitar acceso al archivo adminScript y tutorScript para asegurar que se logueen debidamente (NO FUNCIONA)
-#chmod -rwx adminScript.sh
-#chmod -rwx tutorScript.sh
-
-sudo setfacl -b u:anima:-rwx /home/anima/proyecto/adminScript.sh
-sudo setfacl -b u:anima:-rwx /home/anima/proyecto/tutorScript.sh
-sudo setfacl -b u:anima:-rwx /home/anima/proyecto/tutor.sh
-sudo setfacl -b u:anima:-wx /home/anima/proyecto/alumno.sh
+# Quitar acceso a los siguientes archivos, para hacer obligatorio el logueo como tutor o admin a su correspondiente
+chmod -rwx adminScript.sh
+chmod -rwx tutorScript.sh
+chmod -rwx docente.sh
+chmod -rwx alumno.sh
 
 function menu(){
     # Limpia la consola

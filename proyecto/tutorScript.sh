@@ -7,7 +7,7 @@ function lista(){
     echo "=========================="
     read estudiante
     #busqueda
-    cat /home/anima/proyecto/asistenciaUsuarios
+    cat /home/anima/proyecto/db/asistenciaUsuarios
 }
 
 #Funcion para ver la lista de asistencia dada una fecha
@@ -18,7 +18,7 @@ function asistencia(){
     echo "=========================="
     read fecha
     #Busqueda
-    grep $fecha /home/anima/proyecto/asistenciaUsuarios
+    grep $fecha /home/anima/proyecto/db/asistenciaUsuarios
 }
 
 #Funcion para ver la lista de asistencia docente
@@ -29,7 +29,7 @@ function asistenciadocente(){
     echo "=========================="
     read fecha
     #Busqueda
-    grep $fecha /home/anima/proyecto/asistenciaDocente
+    grep $fecha /home/anima/proyecto/db/asistenciaDocente
 }
 
 #menú de opciones

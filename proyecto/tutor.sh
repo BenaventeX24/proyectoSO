@@ -11,15 +11,9 @@ then
     echo tutor:tutor | sudo chpasswd
 fi
 
-sudo cp -r /home/anima/proyecto /home/tutor
-
-sudo chown -R tutor /home/tutor/proyecto
-
-sudo rm /home/anima/proyecto/tutorScript.sh
-
 # Da permisos al tutor de leer, escribir y ejecutar la carpeta del proyecto y todos sus subdirectorios y archivos
 sudo setfacl -R -m u:tutor:rwx /home/anima/proyecto
 
 # Loguear al usuario tutor y ejecutar el comando 'bash tutorScript.sh'.
 # Debe pedir contraseña de tutor.
-su --login tutor -c "bash /home/tutor/proyecto/tutorScript.sh"
+su --login tutor -c "bash /home/anima/proyecto/tutorScript.sh"
