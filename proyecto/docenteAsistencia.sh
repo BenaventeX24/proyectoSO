@@ -7,8 +7,6 @@ validate_text="^[A-Za-zÁÉÍÓÚáéíóú ]+$"
 # Comprobación de CI
 function validationCI(){
     clear
-    while :
-    do
         echo
         read -p "> Ingrese su cedula de identidad: " ci
         echo
@@ -31,7 +29,7 @@ function validationCI(){
             then
                 # Si la búsqueda de grep dada la ci en esta fecha devuelve algo, quiere decir que esta ci ya fue registrada
                 validateAssist=$(grep $ci /home/anima/proyecto/db/docentes)
-                if [ -z $validateAsisst ];
+                if [ -z "$validateAssist" ];
                 then
         clear
         echo "==============================================================="
@@ -56,6 +54,5 @@ function validationCI(){
                 clear
             fi
         fi
-    done
 }
 validationCI
