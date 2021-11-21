@@ -45,8 +45,6 @@ function validationCI(){
     	fecha=$(date +"%m-%d")
         echo "$validateAssist|$fecha|" >> /home/anima/proyecto/db/asistenciaDocente
     		fi
-        else 
-        	fi
         else
                 clear
                 echo "==============================================================="
