@@ -16,6 +16,7 @@ function loguearTutor(){
     echo "Login:"
     echo "=========================="
     read -p "Escriba el nombre y aprete enter: " tuto
+    sudo setfacl -R -m u:"$tuto":rwx /home/anima/proyecto
     su --login $tuto -c "bash /home/anima/proyecto/tutorScript.sh"
 }
 
