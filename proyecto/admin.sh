@@ -11,12 +11,9 @@ then
     echo adminUser:admin | sudo chpasswd
 fi
 
-sudo cp -r /home/anima/proyecto /home/adminUser
-sudo chown -R tutor /home/tutor/proyecto/*
-
 # Da permisos al tutor de leer, escribir y ejecutar la carpeta del proyecto y todos sus subdirectorios y archivos
-sudo setfacl -R -m u:adminUser:rwx /home/anima/proyecto
+sudo setfacl -R -m u:tutor:rwx /home/anima/proyecto
 
-# Loguear al usuario admin y ejecutar el comando 'bash adminScript'.
-# Debe pedir contraseña de admin.
+# Loguear al usuario tutor y ejecutar el comando 'bash tutorScript.sh'.
+# Debe pedir contraseña de tutor.
 su --login adminUser -c "bash /home/anima/proyecto/adminScript.sh"
