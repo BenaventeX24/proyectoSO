@@ -9,8 +9,6 @@ function registrarTutor(){
     read -p "Escriba una contraseña y aprete enter: " tutorNuevoPass
     useradd -m $tutorNuevoName
     echo $tutorNuevo:$tutorNuevoPass | chpasswd
-    gnome-session-save --logout
-    bash main.sh
 }
 
 function loguearTutor(){
@@ -18,7 +16,7 @@ function loguearTutor(){
     echo "Login:"
     echo "=========================="
     read -p "Escriba el nombre y aprete enter: " tuto
-    su --login $tuto -c "bash /home/project/tutorScript.sh"
+    su --login $tuto -c "bash /home/anima/proyecto/tutorScript.sh"
 }
 
 function menu(){
