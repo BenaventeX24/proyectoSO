@@ -43,11 +43,11 @@ function menu(){
         echo
         echo "1) Crear un nuevo alumno"
         echo
-        echo "2) Revisar la lista de asistencias"
+        echo "2) Revisar la lista de asistencias de alumnos"
         echo
-        echo "3) Revisar la lista de asistencias dada una fecha"
+        echo "3) Revisar la lista de asistencias de alumnos dada una fecha"
         echo
-        echo "4) Revisar la asistencia docente"
+        echo "4) Revisar la asistencia docente dada una fecha"
         echo
         echo "5) Salir"
         echo
@@ -67,7 +67,7 @@ function menu(){
         2)
             asistencia
         ;;
-        2)
+        3)
             asistenciadocente
         ;;
         4)
