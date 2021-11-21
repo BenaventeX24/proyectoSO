@@ -12,8 +12,8 @@ then
 fi
 
 # Da permisos al tutor de leer, escribir y ejecutar la carpeta del proyecto y todos sus subdirectorios y archivos
-sudo setfacl -R -m u:tutor:rwx /home/anima/proyecto
+sudo setfacl -R -m u:administrador:rwx /home/anima/proyecto
 
 # Loguear al usuario tutor y ejecutar el comando 'bash tutorScript.sh'.
 # Debe pedir contraseña de tutor.
-su --login adminUser -c "bash /home/anima/proyecto/adminScript.sh"
+su --login administrador -c "bash /home/anima/proyecto/adminScript.sh"
