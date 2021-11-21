@@ -8,7 +8,7 @@ if [ -z $verify ]
 then
     # Crea un administrador y creá su directorio base (/home/adminUser) con '-m'. Además, añade su contraseña como 'admin' por default.
     sudo useradd -m admin
-    echo adminUser:admin | sudo chpasswd
+    echo administrador:admin | sudo chpasswd
 fi
 
 # Da permisos al tutor de leer, escribir y ejecutar la carpeta del proyecto y todos sus subdirectorios y archivos
