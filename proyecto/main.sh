@@ -1,10 +1,10 @@
 #!/bin/sh
 
 # Quitar acceso a los siguientes archivos, para hacer obligatorio el logueo como tutor o admin a su correspondiente
-chmod -rwx adminScript.sh
-chmod -rwx tutorScript.sh
-chmod -rwx docente.sh
-chmod -rwx alumno.sh
+chmod -777 adminScript.sh
+chmod -777 tutorScript.sh
+chmod -777 docente.sh
+chmod -777 alumno.sh
 
 function menu(){
     # Limpia la consola
