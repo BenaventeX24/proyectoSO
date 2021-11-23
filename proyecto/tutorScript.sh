@@ -33,8 +33,6 @@ function menu(){
         echo
         echo "1) Crear un nuevo alumno"
         echo
-        echo "2) Crear un nuevo alumno"
-        echo
         echo "3) Revisar la lista de asistencias de alumnos dada una fecha"
         echo
         echo "4) Revisar la asistencia docente dada una fecha"
