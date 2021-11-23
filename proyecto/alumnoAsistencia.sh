@@ -27,8 +27,8 @@ function validationCI(){
             # El símbolo '=~' lo que hace es devolver true cuando matchea
             if [[ $ci =~ $validate_number ]];
             then
-                # Si la búsqueda de grep dada la ci en esta fecha devuelve algo, quiere decir que esta ci ya fue registrada
-                validateAssist=$(grep $ci /home/anima/proyecto/db/usuarios)
+                # Si la búsqueda de grep dada la ci en esta fecha devuelve algo, quiere decir que fue registrada
+                validateAssist=$(grep -w $ci /home/anima/proyecto/db/usuarios)
                 if [ -z "$validateAssist" ];
                 then
         clear
