@@ -8,7 +8,7 @@ function registrarTutor(){
     read -p "Escriba un nombre y aprete enter: " tutorNuevoName
     read -p "Escriba una contraseña y aprete enter: " tutorNuevoPass
     useradd -m $tutorNuevoName
-    echo $tutorNuevo:$tutorNuevoPass | chpasswd
+    echo $tutorNuevoName:$tutorNuevoPass | chpasswd
 }
 
 function loguearTutor(){
