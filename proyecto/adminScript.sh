@@ -2,13 +2,12 @@
 
 function registrarTutor(){
     echo "=========================="
-    echo "Ingrese el nombre del nuevo tutor:"
-    echo "Formato: nombre"
+    echo "Crear nuevo tutor:"
     echo "=========================="
     read -p "Escriba un nombre y aprete enter: " tutorNuevoName
     read -p "Escriba una contraseña y aprete enter: " tutorNuevoPass
-    useradd -m $tutorNuevoName
-    echo $tutorNuevoName:$tutorNuevoPass | chpasswd
+    useradd -m "$tutorNuevoName"
+    echo "$tutorNuevoName":"$tutorNuevoPass" | chpasswd
 }
 
 function loguearTutor(){
