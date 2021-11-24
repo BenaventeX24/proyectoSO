@@ -33,6 +33,8 @@ function menu(){
         echo
         echo "1) Crear un nuevo alumno"
         echo
+        echo "2) Crear un nuevo docente"
+        echo
         echo "3) Revisar la lista de asistencias de alumnos dada una fecha"
         echo
         echo "4) Revisar la asistencia docente dada una fecha"
@@ -50,12 +52,15 @@ function menu(){
             bash /home/anima/proyecto/alumno.sh
         ;;
         2)
-            asistencia
+            bash /home/anima/proyecto/alumno.sh
         ;;
         3)
-            asistenciadocente
+            asistencia
         ;;
         4)
+            asistenciadocente
+        ;;
+        5)
             clear
             echo "==============================================================="
             echo
