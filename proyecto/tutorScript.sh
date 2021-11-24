@@ -52,7 +52,7 @@ function menu(){
             bash /home/anima/proyecto/alumno.sh
         ;;
         2)
-            bash /home/anima/proyecto/alumno.sh
+            bash /home/anima/proyecto/docente.sh
         ;;
         3)
             asistencia
