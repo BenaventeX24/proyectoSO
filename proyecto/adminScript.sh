@@ -6,17 +6,8 @@ function registrarTutor(){
     echo "=========================="
     read -p "Escriba un nombre y aprete enter: " tutorNuevoName
     read -p "Escriba una contraseña y aprete enter: " tutorNuevoPass
-    useradd -m "$tutorNuevoName"
-    echo "$tutorNuevoName":"$tutorNuevoPass" | chpasswd
-}
-
-function loguearTutor(){
-    echo "=========================="
-    echo "Login:"
-    echo "=========================="
-    read -p "Escriba el nombre y aprete enter: " tuto
-    sudo setfacl -R -m u:"$tuto":rwx /home/anima/proyecto
-    su --login $tuto -c "bash /home/anima/proyecto/tutorScript.sh"
+    sudo useradd -m "$tutorNuevoName"
+    echo "$tutorNuevoName":"$tutorNuevoPass" | sudo chpasswd
 }
 
 function menu(){
@@ -29,9 +20,7 @@ function menu(){
         echo
         echo "1) Registrar nuevo tutor personalizado"
         echo
-        echo "2) Loguearse como tutor personalizado"
-        echo
-        echo "3) Salir"
+        echo "2) Salir"
         echo
         echo "====================="
         echo
@@ -43,9 +32,6 @@ function menu(){
             registrarTutor
         ;;
         2)
-            loguearTutor
-        ;;
-        3)
             clear
             echo "==============================================================="
             echo
